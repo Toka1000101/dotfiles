@@ -3,6 +3,7 @@ local km = vim.keymap
 
 -- GENERAL 
 o.relativenumber = true
+o.number = true
 o.cursorline = true
 o.autoread = true
 o.autowrite = true
