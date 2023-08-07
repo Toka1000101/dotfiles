@@ -16,9 +16,24 @@ local plugins = {
 	{
     'nvim-telescope/telescope.nvim', tag = '0.1.2',
     dependencies = { 'nvim-lua/plenary.nvim' }
-  }
+  },
+	{ 
+		'nvim-telescope/telescope-fzf-native.nvim', build = 'make'
+	},
+	{
+  	"nvim-tree/nvim-tree.lua",
+  	version = "*",
+  	lazy = false,
+		dependencies = {
+    	"nvim-tree/nvim-web-devicons",
+  	},
+  	config = function()
+    	require("nvim-tree").setup {}
+  	end,
+	}
 }
 
 
 
-require("lazy").setup(plugins)
+require('lazy').setup(plugins)
+require('telescope').load_extension('fzf')
