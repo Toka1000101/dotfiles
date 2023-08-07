@@ -203,7 +203,3 @@ for_window [class=".*"] title_format "<b>%title</b>"
 
 gaps inner 5
 
-
-
-
-
