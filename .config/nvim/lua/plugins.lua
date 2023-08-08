@@ -34,16 +34,20 @@ local plugins = {
  		 branch = 'v2.x',
  			 dependencies = {
  		 		-- LSP Support
- 		   {'neovim/nvim-lspconfig'},             
- 		   {'williamboman/mason.nvim'},          
- 		   {'williamboman/mason-lspconfig.nvim'}, 
+ 		   {'neovim/nvim-lspconfig'},
+ 		   {'williamboman/mason.nvim'},
+ 		   {'williamboman/mason-lspconfig.nvim'},
 
  		   -- Autocompletion
- 		   {'hrsh7th/nvim-cmp'},     
+ 		   {'hrsh7th/nvim-cmp'},
  		   {'hrsh7th/cmp-nvim-lsp'},
- 		   {'L3MON4D3/LuaSnip'}, 
+ 		   {'L3MON4D3/LuaSnip'},
  		 }
-	}
+	},
+
+	{
+      'nvim-treesitter/nvim-treesitter',run = ':TSUpdate'
+  }
 
 
 }
