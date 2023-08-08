@@ -18,3 +18,4 @@ o.smartcase = true
 
 -- USE CLIPBOARD (clipboard tool needs to be installed like xlip for X11)
 o.clipboard = 'unnamedplus'
+
