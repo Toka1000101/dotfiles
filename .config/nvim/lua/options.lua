@@ -1,5 +1,4 @@
 local o = vim.opt
-local km = vim.keymap
 
 -- GENERAL 
 o.relativenumber = true
