@@ -9,7 +9,7 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod1
+set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -194,7 +194,8 @@ exec_always --no-startup-id nm-applet
 
 
 # georgian layoout
-exec --no-startup-id setxkbmap us,ge -option 'grp:shifts_toggle'
+exec_always --no-startup-id setxkbmap us,ge -option 'grp:shifts_toggle' -option altwin:swap_lalt_lwin -option altwin:swap_alt_win
+
 
 # flameshot
 bindsym Print exec "flameshot gui"
