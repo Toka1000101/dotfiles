@@ -4,6 +4,6 @@ font_size 12
 
 
 # BEGIN_KITTY_THEME
-# IC Green PPL
+# Solarized Darcula
 include current-theme.conf
 # END_KITTY_THEME

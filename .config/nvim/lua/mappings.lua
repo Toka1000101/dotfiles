@@ -1,6 +1,6 @@
 local mapkey = vim.keymap.set
 local g = vim.g
-local opts = {} 
+local opts = {}
 
 vim.g.mapleader = ' '
 

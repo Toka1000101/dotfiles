@@ -10,6 +10,7 @@ end)
 require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 
 lsp.setup()
+
 require("mason").setup({
     ui = {
         icons = {
@@ -18,4 +19,19 @@ require("mason").setup({
             package_uninstalled = "✗"
         }
     }
+})
+
+
+local cmp = require('cmp')
+local cmp_action = require('lsp-zero').cmp_action()
+
+cmp.setup({
+  mapping = {
+    -- `Enter` key to confirm completion
+    ['<Tab>'] = cmp.mapping.confirm({select = true}),
+		['<C-Space>'] = cmp.mapping.complete(),
+    ['<C-k>'] = cmp_action.luasnip_jump_forward(),
+    ['<C-l>'] = cmp_action.luasnip_jump_backward(),
+
+  }
 })

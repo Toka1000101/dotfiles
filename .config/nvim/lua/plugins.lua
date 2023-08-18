@@ -1,4 +1,5 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
     "git",
@@ -30,6 +31,15 @@ local plugins = {
   	end,
 	},
 	{
+		'nvim-lualine/lualine.nvim',
+		 dependencies = {
+    	"nvim-tree/nvim-web-devicons",
+  	}
+	},
+	{
+		'rebelot/kanagawa.nvim'
+	},
+	{
  		'VonHeikemen/lsp-zero.nvim',
  		 branch = 'v2.x',
  			 dependencies = {
@@ -52,6 +62,6 @@ local plugins = {
 
 }
 
-
-
 require('lazy').setup(plugins)
+
+
