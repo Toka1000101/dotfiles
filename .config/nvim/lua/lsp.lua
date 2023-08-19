@@ -1,16 +1,3 @@
-local lsp = require('lsp-zero').preset({})
-
-lsp.on_attach(function(client, bufnr)
-  -- see :help lsp-zero-keybindings
-  -- to learn the available actions
-  lsp.default_keymaps({buffer = bufnr})
-end)
-
--- (Optional) Configure lua language server for neovim
-require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
-
-lsp.setup()
-
 require("mason").setup({
     ui = {
         icons = {
@@ -21,13 +8,28 @@ require("mason").setup({
     }
 })
 
+local lsp = require('lsp-zero').preset({})
+local lspconfig = require('lspconfig')
+
+lsp.on_attach(function(client, bufnr)
+  -- see :help lsp-zero-keybindings
+  -- to learn the available actions
+  lsp.default_keymaps({buffer = bufnr})
+end)
+
+
+-- (Optional) Configure lua language server for neovim
+lspconfig.lua_ls.setup(lsp.nvim_lua_ls())
+lspconfig.eslint.setup({})
+lsp.setup()
+
+
 
 local cmp = require('cmp')
 local cmp_action = require('lsp-zero').cmp_action()
 
 cmp.setup({
   mapping = {
-    -- `Enter` key to confirm completion
     ['<Tab>'] = cmp.mapping.confirm({select = true}),
 		['<C-Space>'] = cmp.mapping.complete(),
     ['<C-k>'] = cmp_action.luasnip_jump_forward(),
@@ -35,3 +37,4 @@ cmp.setup({
 
   }
 })
+
