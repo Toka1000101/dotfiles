@@ -20,7 +20,7 @@ end)
 
 -- (Optional) Configure lua language server for neovim
 lspconfig.lua_ls.setup(lsp.nvim_lua_ls())
-lspconfig.eslint.setup({})
+--lspconfig.eslint.setup({})
 lsp.setup()
 
 

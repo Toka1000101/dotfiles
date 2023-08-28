@@ -21,7 +21,7 @@ mapkey(modes, 'k', 'j',opts)
 mapkey(modes, 'j', 'h',opts)
 
 -- shorcuts to change default options and options in options.lua
-g.isRelativeNumber = true
+g.isRelativeNumber = false
 
 function toggleRelativeNumber()
 	g.isRelativeNumber = not g.isRelativeNumber

@@ -201,8 +201,8 @@ bindsym $mod+r mode "resize"
 exec_always --no-startup-id nm-applet
 
 
-# georgian layoout
-exec_always --no-startup-id setxkbmap us,ge -option 'grp:shifts_toggle' -option altwin:swap_lalt_lwin -option altwin:swap_alt_win
+exec_always --no-startup-id setxkbmap -option altwin:swap_lalt_lwin -option altwin:swap_alt_win
+exec_always --no-startup-id setxkbmap 'us','ge','us(dvorak)' -option 'grp:shifts_toggle' 
 
 
 # flameshot
