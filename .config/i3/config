@@ -50,7 +50,7 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec --no-startup-id kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -220,3 +220,6 @@ bindsym $mod+minus scratchpad show
 
 #i3lock keybindings
 bindsym $mod+Shift+p exec "~/.config/i3/i3lock.sh"
+
+#turn off powersave mode
+exec_always --no-startup-id "~/.config/i3/powersave-turn-off.sh"
