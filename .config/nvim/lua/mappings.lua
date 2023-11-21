@@ -1,6 +1,7 @@
 local mapkey = vim.keymap.set
 local g = vim.g
 local opts = {}
+local nvimtree = require('nvim-tree')
 
 vim.g.mapleader = ' '
 

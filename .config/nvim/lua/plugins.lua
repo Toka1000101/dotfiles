@@ -41,7 +41,7 @@ local plugins = {
 	},
 	{
  		'VonHeikemen/lsp-zero.nvim',
- 		 branch = 'v2.x',
+ 		 branch = 'v3.x',
  			 dependencies = {
  		 		-- LSP Support
  		   {'neovim/nvim-lspconfig'},
@@ -57,7 +57,18 @@ local plugins = {
 
 	{
       'nvim-treesitter/nvim-treesitter',run = ':TSUpdate'
-  }
+  },
+	{
+  	"gennaro-tedesco/nvim-jqx",
+  	ft = { "json", "yaml" },
+	},
+	{
+    'numToStr/Comment.nvim',
+    opts = {
+        -- add any options here
+    },
+    lazy = false,
+	}
 
 
 }

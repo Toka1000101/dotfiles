@@ -189,6 +189,7 @@ mode "resize" {
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
 }
+
 bar {
 	status_command i3status --config ~/.config/i3/i3status.conf
 	position top
@@ -206,7 +207,7 @@ exec_always --no-startup-id setxkbmap 'us','ge','us(dvorak)' -option 'grp:shifts
 
 
 # flameshot
-bindsym Print exec "flameshot gui"
+bindsym Print exec --no-startup-id flameshot gui
 
 for_window [class=".*"] title_format "<b>%title</b>"
 
@@ -223,3 +224,8 @@ bindsym $mod+Shift+p exec "~/.config/i3/i3lock.sh"
 
 #turn off powersave mode
 exec_always --no-startup-id "~/.config/i3/powersave-turn-off.sh"
+
+#moving workspaces
+bindsym $mod+Control+j move workspace to output right
+bindsym $mod+Control+semicolon move workspace to output right
+

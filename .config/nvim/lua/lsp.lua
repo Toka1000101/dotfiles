@@ -32,8 +32,10 @@ cmp.setup({
   mapping = {
     ['<Tab>'] = cmp.mapping.confirm({select = true}),
 		['<C-Space>'] = cmp.mapping.complete(),
-    ['<C-k>'] = cmp_action.luasnip_jump_forward(),
-    ['<C-l>'] = cmp_action.luasnip_jump_backward(),
+    ['<C-f>'] = cmp_action.luasnip_jump_forward(),
+    ['<C-b>'] = cmp_action.luasnip_jump_backward(),
+    ['<C-u>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-d>'] = cmp.mapping.scroll_docs(4),
 
   }
 })
