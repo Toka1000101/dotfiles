@@ -229,3 +229,8 @@ exec_always --no-startup-id "~/.config/i3/powersave-turn-off.sh"
 bindsym $mod+Control+j move workspace to output right
 bindsym $mod+Control+semicolon move workspace to output right
 
+# dual screen configuration
+exec xrandr --output HDMI-0 --auto --right-of DP-1
+
+# Password manager shortcut
+bindsym $mod+p exec --no-startup-id keepassxc
