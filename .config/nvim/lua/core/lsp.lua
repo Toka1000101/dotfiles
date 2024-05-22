@@ -1,13 +1,3 @@
-require("mason").setup({
-    ui = {
-        icons = {
-            package_installed = "✓",
-            package_pending = "➜",
-            package_uninstalled = "✗"
-        }
-    }
-})
-
 local lsp = require('lsp-zero').preset({})
 local lspconfig = require('lspconfig')
 
@@ -36,7 +26,6 @@ cmp.setup({
     ['<C-b>'] = cmp_action.luasnip_jump_backward(),
     ['<C-u>'] = cmp.mapping.scroll_docs(-4),
     ['<C-d>'] = cmp.mapping.scroll_docs(4),
-
   }
 })
 

@@ -1,4 +1,9 @@
-require('lualine').setup {
+return {
+    'nvim-lualine/lualine.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+
+		config = {
+
   options = {
     icons_enabled = true,
     theme = 'auto',
@@ -37,4 +42,6 @@ require('lualine').setup {
   winbar = {},
   inactive_winbar = {},
   extensions = {}
+
+		}
 }

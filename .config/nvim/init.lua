@@ -1,7 +1,4 @@
+-- options needs to be before lazy
 require('options')
-require('plugins')
-require('mappings')
-require('lsp')
-require('treesitter')
-require('bar')
-require('theme')
+require('plugin_manager')
+require('core')
