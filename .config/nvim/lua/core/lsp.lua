@@ -1,31 +1,22 @@
-local lsp = require('lsp-zero').preset({})
+local lsp_zero = require('lsp-zero')
 local lspconfig = require('lspconfig')
 
-lsp.on_attach(function(client, bufnr)
+lsp_zero.on_attach(function(client, bufnr)
   -- see :help lsp-zero-keybindings
   -- to learn the available actions
-  lsp.default_keymaps({buffer = bufnr})
+  lsp_zero.default_keymaps({buffer = bufnr})
 end)
 
 
--- (Optional) Configure lua language server for neovim
-lspconfig.lua_ls.setup(lsp.nvim_lua_ls())
---lspconfig.eslint.setup({})
-lsp.setup()
+require('mason').setup({})
 
-
-
-local cmp = require('cmp')
-local cmp_action = require('lsp-zero').cmp_action()
-
-cmp.setup({
-  mapping = {
-    ['<Tab>'] = cmp.mapping.confirm({select = true}),
-		['<C-Space>'] = cmp.mapping.complete(),
-    ['<C-f>'] = cmp_action.luasnip_jump_forward(),
-    ['<C-b>'] = cmp_action.luasnip_jump_backward(),
-    ['<C-u>'] = cmp.mapping.scroll_docs(-4),
-    ['<C-d>'] = cmp.mapping.scroll_docs(4),
-  }
+require('mason-lspconfig').setup({
+  ensure_installed = {'kotlin_language_server', 'lua_ls'},
+  handlers = {
+    function(server_name)
+			-- lspconfig.lua_ls.setup{}
+			-- lspconfig.kotlin_language_server.setup{}
+			lspconfig[server_name].setup({})
+    end,
+  },
 })
-

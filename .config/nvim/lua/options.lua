@@ -5,7 +5,7 @@ o.relativenumber = true
 o.number = true
 o.cursorline = true
 o.autoread = true
-o.autowrite = true
+o.autowrite = true 
 
 -- TAB SPACING 
 o.shiftwidth = 2
