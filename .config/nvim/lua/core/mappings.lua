@@ -29,3 +29,10 @@ end
 
 mapkey('n','<leader>rn', toggleRelativeNumber,opts)
 
+
+-- window navigation
+mapkey('n', '<leader>;', '<C-w>l', {noremap = true})
+mapkey('n', '<leader>l', '<C-w>k', {noremap = true})
+mapkey('n', '<leader>k', '<C-w>j', {noremap = true})
+mapkey('n', '<leader>j', '<C-w>h', {noremap = true})
+

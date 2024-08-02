@@ -1,11 +1,12 @@
 local o = vim.opt
+local g = vim.g
 
 -- GENERAL 
 o.relativenumber = true
 o.number = true
 o.cursorline = true
 o.autoread = true
-o.autowrite = true 
+o.autowrite = true
 
 -- TAB SPACING 
 o.shiftwidth = 2
@@ -21,10 +22,10 @@ o.clipboard = 'unnamedplus'
 
 -- disable netrw for neovim, as advices on nvim-tree's github page
 -- type :help nvim-tree-netrw for details
-vim.g.loaded_netrw       = 1
-vim.g.loaded_netrwPlugin = 1
+g.loaded_netrw       = 1
+g.loaded_netrwPlugin = 1
 
 -- need to set mapleader before lazy
 -- originally was located in mappings.lua
-vim.g.mapleader = ' '
+g.mapleader = ' '
 
