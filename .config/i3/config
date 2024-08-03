@@ -234,3 +234,6 @@ exec xrandr --output HDMI-0 --auto --left-of DP-1
 
 # Password manager shortcut
 bindsym $mod+p exec --no-startup-id keepassxc
+
+# Syncthing
+exec --no-startup-id syncthing
