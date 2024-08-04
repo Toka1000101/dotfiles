@@ -1,17 +1,17 @@
 return {
-  {
+	{
 		'williamboman/mason.nvim',
 		config = {
-    ui = {
-        icons = {
-            package_installed = "✓",
-            package_pending = "➜",
-            package_uninstalled = "✗"
-        }
-    }
+			ui = {
+				icons = {
+					package_installed = "✓",
+					package_pending = "➜",
+					package_uninstalled = "✗"
+				}
+			}
 		}
 	},
-  {'williamboman/mason-lspconfig.nvim'},
+	{'williamboman/mason-lspconfig.nvim'},
 
 
 	{'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
