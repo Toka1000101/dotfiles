@@ -2,7 +2,6 @@ local mapkey = vim.keymap.set
 local g = vim.g
 local opts = {}
 
-
 -- telescope.nvim mappings
 local builtin = require('telescope.builtin')
 mapkey('n', '<leader>ff', builtin.find_files,{})
@@ -28,7 +27,6 @@ function toggleRelativeNumber()
 end
 
 mapkey('n','<leader>rn', toggleRelativeNumber,opts)
-
 
 -- window navigation
 mapkey('n', '<leader>;', '<C-w>l', {noremap = true})
