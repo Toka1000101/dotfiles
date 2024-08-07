@@ -1,5 +1,6 @@
 local lsp_zero = require('lsp-zero')
 local lspconfig = require('lspconfig')
+local cmp = require('cmp')
 
 lsp_zero.on_attach(function(client, bufnr)
   -- see :help lsp-zero-keybindings
@@ -17,4 +18,10 @@ require('mason-lspconfig').setup({
 			lspconfig[server_name].setup({})
     end,
   },
+})
+
+cmp.setup({
+	mapping = cmp.mapping.preset.insert({
+		['<Tab>'] = cmp.mapping.confirm({select = true})
+	})
 })
