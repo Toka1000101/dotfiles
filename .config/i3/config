@@ -237,3 +237,7 @@ bindsym $mod+p exec --no-startup-id keepassxc
 
 # Syncthing
 exec --no-startup-id syncthing
+
+# dunst noficication
+exec --no-startup-id dunst
+

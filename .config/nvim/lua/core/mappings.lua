@@ -7,6 +7,7 @@ local builtin = require('telescope.builtin')
 mapkey('n', '<leader>ff', builtin.find_files,{})
 mapkey('n', '<leader>fg', builtin.live_grep,{})
 mapkey('n', '<C-p>', builtin.git_files,{})
+mapkey('n', '<leader>fb', '<cmd>Telescope buffers<CR>')
 
 -- nvim-tree mappings
 mapkey('n', '<leader>ft', ':NvimTreeToggle<CR>',opts)

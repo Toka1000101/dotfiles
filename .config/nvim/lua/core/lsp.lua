@@ -12,7 +12,7 @@ end)
 require('mason').setup({})
 
 require('mason-lspconfig').setup({
-  ensure_installed = {'angularls','tsserver', 'lua_ls','clangd','jdtls'},
+  ensure_installed = {'angularls','ts_ls', 'lua_ls','clangd','jdtls'},
   handlers = {
     function(server_name)
 			lspconfig[server_name].setup({})
