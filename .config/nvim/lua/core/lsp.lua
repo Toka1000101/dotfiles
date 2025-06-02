@@ -1,10 +1,7 @@
 local lsp_zero = require('lsp-zero')
-local lspconfig = require('lspconfig')
 local cmp = require('cmp')
 
 lsp_zero.on_attach(function(client, bufnr)
-  -- see :help lsp-zero-keybindings
-  -- to learn the available actions
   lsp_zero.default_keymaps({buffer = bufnr})
 end)
 
@@ -12,10 +9,10 @@ end)
 require('mason').setup({})
 
 require('mason-lspconfig').setup({
-  ensure_installed = {'angularls','ts_ls', 'lua_ls','clangd','jdtls', 'gopls' },
+  ensure_installed = {'lua_ls','clangd', 'gopls' },
   handlers = {
     function(server_name)
-			lspconfig[server_name].setup({})
+			lsp_zero.default_setup(server_name)
     end,
   },
 })

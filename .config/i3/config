@@ -204,7 +204,7 @@ exec_always --no-startup-id nm-applet
 #keyboard configuration
 #exec_always --no-startup-id setxkbmap -option altwin:swap_lalt_lwin -option altwin:swap_alt_win
 # removed 'us(dvorak)'
-exec_always --no-startup-id setxkbmap 'us','ge','us(dvorak)' -option 'grp:shifts_toggle' 
+exec_always --no-startup-id setxkbmap 'us','ge', -option 'grp:shifts_toggle' 
 
 
 # flameshot
