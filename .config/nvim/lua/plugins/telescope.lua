@@ -1,6 +1,6 @@
 return {
 	'nvim-telescope/telescope.nvim', branch = '0.1.x',
-	dependencies = { 
+	dependencies = {
 		'nvim-lua/plenary.nvim',
 		{
 			'nvim-telescope/telescope-fzf-native.nvim',
@@ -14,6 +14,8 @@ return {
 
 		telescope.setup({
 			defaults = {
+				layout_strategy = 'horizontal',
+				layout_config = { height = 0.99, width = 0.99 },
 			},
 			pickers = {
 				buffers = {
