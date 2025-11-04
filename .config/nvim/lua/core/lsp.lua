@@ -5,11 +5,10 @@ lsp_zero.on_attach(function(client, bufnr)
   lsp_zero.default_keymaps({buffer = bufnr})
 end)
 
-
 require('mason').setup({})
 
 require('mason-lspconfig').setup({
-  ensure_installed = {'lua_ls','clangd', 'gopls', 'rust_analyzer' },
+  ensure_installed = {'lua_ls','clangd', 'rust_analyzer' },
   handlers = {
     function(server_name)
 			lsp_zero.default_setup(server_name)
