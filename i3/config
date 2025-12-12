@@ -193,7 +193,7 @@ mode "resize" {
 
 bar {
 	status_command i3status --config ~/.config/i3/i3status.conf
-	position top
+	position bottom 
 }
 
 
@@ -243,3 +243,8 @@ exec --no-startup-id syncthing
 # dunst noficication
 exec --no-startup-id dunst
 
+#swap esc and caps lock
+exec --no-startup-id setxkbmap  -layout us,ge -option caps:swapescape
+
+#bluetooth applet
+exec --no-startup-id blueman-applet &
