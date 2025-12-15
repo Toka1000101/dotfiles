@@ -212,11 +212,12 @@ exec_always --no-startup-id setxkbmap 'us','ge', -option 'grp:shifts_toggle'
 bindsym Print exec --no-startup-id flameshot gui
 
 for_window [class=".*"] title_format "<b>%title</b>"
-
-gaps inner 5
+default_border pixel 3
+client.focused #4C7899 #4386b9 #FFFFFF #2E9EF4
 
 # Make the currently focused window a scratchpad
 bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+Shift+equal floating toggle
 
 # Show the first scratchpad window
 bindsym $mod+minus scratchpad show
