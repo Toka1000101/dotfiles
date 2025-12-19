@@ -29,3 +29,7 @@ g.loaded_netrwPlugin = 1
 -- originally was located in mappings.lua
 g.mapleader = ' '
 
+-- folding
+o.foldmethod = "indent"
+o.foldlevel = 99
+o.foldenable = true
