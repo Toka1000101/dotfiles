@@ -31,5 +31,5 @@ g.mapleader = ' '
 
 -- folding
 o.foldmethod = "indent"
-o.foldlevel = 3
+o.foldlevel = 10
 o.foldenable = true
