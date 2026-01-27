@@ -8,7 +8,7 @@ end)
 require('mason').setup({})
 
 require('mason-lspconfig').setup({
-  ensure_installed = {'lua_ls', 'ts_ls'},
+  ensure_installed = {'lua_ls', 'ts_ls', 'clangd'},
   handlers = {
     function(server_name)
 			lsp_zero.default_setup(server_name)
