@@ -253,4 +253,3 @@ exec --no-startup-id blueman-applet &
 #app launch keybinds 
 bindsym $mod+d exec thunar
 bindsym $mod+b exec brave
-
