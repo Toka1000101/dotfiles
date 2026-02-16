@@ -45,8 +45,8 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id ~/.config/dotfiles/i3/mic.sh
 
 # Sreen brightness controls (F5 and F6)
-bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
-bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5% && dunstify -r 1 -t 1500 "$(brightnessctl get) Nits"
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%- && dunstify -r 1 -t 1500 "$(brightnessctl get) Nits"
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
