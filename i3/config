@@ -231,7 +231,7 @@ bindsym $mod+minus scratchpad show
 bindsym $mod+Shift+p exec "~/.config/i3/i3lock.sh"
 
 #turn off powersave mode
-exec_always --no-startup-id "~/.config/i3/powersave-turn-off.sh"
+#exec_always --no-startup-id "~/.config/i3/powersave-turn-off.sh"
 
 #moving workspaces
 bindsym $mod+Control+j move workspace to output right

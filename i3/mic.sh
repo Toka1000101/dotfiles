@@ -1,11 +1,13 @@
 #!/bin/bash
 
+# toggle mic mute
 pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 STATE=$(pactl get-source-mute @DEFAULT_SOURCE@)
 
 if [[ $STATE == *"yes"* ]]; then
-    echo 1 > /sys/class/leds/platform::micmute/brightness
+    # Use brightnessctl to set the LED
+    brightnessctl --device='platform::micmute' set 1
 else
-    echo 0 > /sys/class/leds/platform::micmute/brightness
+    brightnessctl --device='platform::micmute' set 0
 fi
