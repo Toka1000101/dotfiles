@@ -257,3 +257,6 @@ exec --no-startup-id blueman-applet &
 #app launch keybinds 
 bindsym $mod+d exec thunar
 bindsym $mod+b exec brave
+
+# if application needs sudo privileges, using pop-up window to type password
+exec_always --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
