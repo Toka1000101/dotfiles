@@ -196,10 +196,11 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
-bar {
-	status_command i3status --config ~/.config/i3/i3status.conf
-	position bottom 
-}
+# using xfce + i3
+#bar {
+#	status_command i3status --config ~/.config/i3/i3status.conf
+#	position bottom 
+#}
 
 
 bindsym $mod+r mode "resize"
