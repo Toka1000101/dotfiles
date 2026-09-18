@@ -239,7 +239,7 @@ bindsym $mod+Control+j move workspace to output right
 bindsym $mod+Control+semicolon move workspace to output right
 
 # dual screen configuration
-exec xrandr --output HDMI-0 --auto --left-of DP-1
+#exec xrandr --output HDMI-A-0 --auto --left-of DP
 
 # Password manager shortcut
 bindsym $mod+p exec --no-startup-id keepassxc
