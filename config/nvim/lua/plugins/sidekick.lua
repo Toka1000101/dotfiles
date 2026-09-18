@@ -7,6 +7,10 @@ return {
         backend = "tmux",
         enabled = true,
       },
+			win = {
+				position = "right",
+				width = 80
+			}
     },
   },
   keys = {
@@ -23,8 +27,8 @@ return {
     },
     {
       "<c-.>",
-      function() require("sidekick.cli").toggle() end,
-      desc = "Sidekick Toggle",
+      function() require("sidekick.cli").focus() end,
+      desc = "Sidekick Focus",
       mode = { "n", "t", "i", "x" },
     },
     {
@@ -74,8 +78,4 @@ return {
       desc = "Sidekick Toggle Claude",
     },
   },
-	config = function()
-		-- This ensures ESC leaves terminal mode
-		vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]], { noremap = true, silent = true, desc = "Exit terminal mode" })
-	end,
 }

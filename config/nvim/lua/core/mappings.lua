@@ -35,4 +35,4 @@ mapkey('n', '<leader>;', '<C-w>l', {noremap = true})
 mapkey('n', '<leader>l', '<C-w>k', {noremap = true})
 mapkey('n', '<leader>k', '<C-w>j', {noremap = true})
 mapkey('n', '<leader>j', '<C-w>h', {noremap = true})
-
+mapkey('t', '<Esc><Esc>', [[<C-\><C-n>]])
