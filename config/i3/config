@@ -262,3 +262,35 @@ bindsym $mod+b exec brave
 
 # if application needs sudo privileges, using pop-up window to type password
 exec_always --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+
+# Enter Mouse Mode
+bindsym $mod+m mode "mouse"
+
+mode "mouse" {
+    # Movement (j k l ;)
+    bindsym j exec --no-startup-id xdotool mousemove_relative -- -20 0
+    bindsym k exec --no-startup-id xdotool mousemove_relative 0 20
+    bindsym l exec --no-startup-id xdotool mousemove_relative 0 -20
+    bindsym semicolon exec --no-startup-id xdotool mousemove_relative 20 0
+
+    # Faster Movement (Shift + j k l ;)
+    bindsym Shift+j exec --no-startup-id xdotool mousemove_relative -- -100 0
+    bindsym Shift+k exec --no-startup-id xdotool mousemove_relative 0 100
+    bindsym Shift+l exec --no-startup-id xdotool mousemove_relative 0 -100
+    bindsym Shift+colon exec --no-startup-id xdotool mousemove_relative 100 0
+
+    # Mouse Clicks
+    bindsym f exec --no-startup-id xdotool click 1      # Left Click
+    bindsym d exec --no-startup-id xdotool click 3      # Right Click
+    bindsym s exec --no-startup-id xdotool click 2      # Middle Click
+
+    # Scrolling
+    bindsym r exec --no-startup-id xdotool click 4      # Scroll Up
+    bindsym v exec --no-startup-id xdotool click 5      # Scroll Down
+
+    # Exit Mouse Mode
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+m mode "default"
+}
