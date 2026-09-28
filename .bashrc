@@ -29,3 +29,4 @@ PS1="${Green}[\u@\h \W]\$(git_current_branch)${Color_Off}\$"
 export EDITOR="nvim"
 export VISUAL="nvim"
 export SUDO_EDITOR="nvim"
+export MANPAGER='nvim +Man!'
