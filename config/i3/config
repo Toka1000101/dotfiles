@@ -293,3 +293,4 @@ mode "mouse" {
     bindsym Escape mode "default"
     bindsym $mod+m mode "default"
 }
+exec --no-startup-id nitrogen --restore
