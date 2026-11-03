@@ -7,5 +7,6 @@ return {
 
     -- Use latexmk for continuous compilation on save
     vim.g.vimtex_compiler_method = "latexmk"
+		vim.g.vimtex_grammar_textidot = { enabled = 0 }
   end
 }
