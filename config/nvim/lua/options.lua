@@ -33,3 +33,4 @@ g.mapleader = ' '
 o.foldmethod = "indent"
 o.foldlevel = 10
 o.foldenable = true
+g.no_man_maps = 1
